@@ -14,22 +14,28 @@ prompt per
 
 /* prompt nome utente */
 
-const userName = prompt ('inserisci il tuo nome')
+const userName = prompt ('inserisci il tuo nome');
 
 /* prompt cognome */
 
-const userSourname = prompt ('inserisci il tuo cognome')
+const userSourname = prompt ('inserisci il tuo cognome');
 
 /* prompt colore preferito */
 
-const favouriteColor = prompt ('inserisci il tuo colore preferito')
+const favouriteColor = prompt ('inserisci il tuo colore preferito');
 
-/* stampare il risultato in console */
+/* giorno di nascita */
 
-console.log (userName + userSourname + favouriteColor + '23')
+const userBirthDay = prompt ('Il tuo giorno di nascita');
 
-/* stampare il risultato in pagina */
+const userPassword = userName + userSourname + favouriteColor + ( Number(userBirthDay) + 23);
 
-const infoElement = document.getElementById ('info')
+const assignedPassword = document.getElementById('info');
 
-infoElement.innerHTML = userName + userSourname + favouriteColor + '23'
+//stampare in console
+
+console.log (userPassword);
+
+//stampare in pagina
+
+assignedPassword.innerHTML = userPassword;
